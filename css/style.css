@@ -1,0 +1,112 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0 0 0 15px;
+  overflow: hidden;
+  display: grid;
+  grid-gap: 20px;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: "board canvas";
+  background: linear-gradient(#48c6ef, #6f86d6);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+canvas {
+  grid-area: canvas;
+}
+
+h3 {
+  font-size: 0.8rem;
+  padding-left: 10px;
+  display: block;
+}
+
+.gameboard_display {
+  display: block;
+  position: relative;
+  text-align: center;
+  height: 20px;
+}
+
+.container {
+  grid-area: board;
+  box-sizing: border-box;
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  height: 606px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.char-list {
+  padding: 10px;
+  height: 100%;
+  border-radius: 5px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+img {
+  height: 100px;
+  cursor: pointer;
+  justify-self: center;
+}
+
+img:hover {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+i {
+  color: red;
+}
+
+.modal-overlay {
+  position: fixed;
+
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transform: scaleY(0);
+  display: flex;
+}
+
+.modal-overlay.active {
+  transform: scaleY(1);
+  transition: 1s;
+}
+
+.modal {
+  position: relative;
+  background: grey;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal h1 {
+  text-align: center;
+}
+
+.btn-reset {
+  border-radius: 10px;
+  background: black;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  color: white;
+}

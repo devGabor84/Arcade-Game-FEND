@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Effective JavaScript: Frogger</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="gameboard">
+        <div class="gameboard_container">
+          <h3>Health:</h3>
+          <div class="gameboard_display" id="health">
+            <i class="fas fa-heart" id="heart-one"></i>
+            <i class="fas fa-heart" id="heart-two"></i>
+            <i class="fas fa-heart" id="heart-three"></i>
+          </div>
+        </div>
+        <div class="gameboard_container">
+          <h3>Your score:</h3>
+          <div class="gameboard_display" id="score">0</div>
+        </div>
+      </div>
+      <div class="characters-container">
+        <h3>Choose your character</h3>
+        <div class="char-list"></div>
+      </div>
+    </div>
+    <div class="modal-overlay">
+      <div class="modal">
+        <h1>Game over!</h1>
+        <button class="btn-reset">Play again</button>
+      </div>
+    </div>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+  </body>
+</html>
